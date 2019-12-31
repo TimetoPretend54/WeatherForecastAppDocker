@@ -4,19 +4,16 @@ services:
         build:
             context: ./src
             dockerfile: Dockerfile
-        hostname: "weatherapp"
         ports:
             - "8080:80"
         depends_on:
             - weatherforecastdb
     weatherforecastdb:
-        image: "microsoft/mssql-server-windows-developer:1709"
-        hostname: "weatherdb"
-        volumes:
-            - ./sql/SqlData:C:/SqlData
+        build:
+            context: ./sql
+            dockerfile: Dockerfile
         environment:
             - ACCEPT_EULA=Y
             - SA_PASSWORD=Sample123
-            - attach_dbs=[{"dbName":"WeatherForecast","dbFiles":["C:\\SqlData\\WeatherForecast.mdf","C:\\SqlData\\WeatherForecast_log.ldf"]}]
         ports:
             - "1433:1433"
