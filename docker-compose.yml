@@ -4,6 +4,7 @@ services:
         build:
             context: ./src
             dockerfile: Dockerfile
+        image: "time2pretend/weatherforecastapp-sql:latest"
         ports:
             - "8080:80"
         depends_on:
@@ -12,6 +13,7 @@ services:
         build:
             context: ./sql
             dockerfile: Dockerfile
+        image: "time2pretend/weatherforecastdb-sql:latest"
         environment:
             - ACCEPT_EULA=Y
             - SA_PASSWORD=Sample123
