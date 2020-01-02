@@ -1,0 +1,15 @@
+version: '3'
+services:
+    weatherforecastapp:
+        image: 'time2pretend/weatherforecastapp-sql:latest'
+        ports:
+            - '8080:80'
+        depends_on:
+            - weatherforecastdb
+    weatherforecastdb:
+        image: 'time2pretend/weatherforecastdb-sql:latest'
+        environment:
+            - ACCEPT_EULA=Y
+            - SA_PASSWORD=Sample123
+        ports:
+            - '1433:1433'
