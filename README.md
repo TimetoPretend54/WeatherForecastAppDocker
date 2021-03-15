@@ -26,3 +26,20 @@ _**NOTE:**_
    docker-compose down
    ```
    - `--rmi` will remove images, if desired, for more info see [docker-compose down docs](https://docs.docker.com/compose/reference/down/)
+
+## Accessing Database
+
+Utilizing whatever Database for accessing SQL infrastructure, connect to the DB w/ the following info:
+
+```
+Server Name: localhost,1433
+
+Auth: SQL Server Authentication
+User/Login: sa
+Password: Sample123
+```
+
+Helpful Database Tools:
+
+- [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15)
+- [Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15)
