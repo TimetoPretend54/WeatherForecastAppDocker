@@ -5,6 +5,7 @@ COPY WeatherForecast.Api/*.csproj ./
 RUN dotnet restore
 
 # copy everything else and build app
+WORKDIR /app
 COPY WeatherForecast.Api/. ./
 RUN dotnet publish -c Release -o out
 
