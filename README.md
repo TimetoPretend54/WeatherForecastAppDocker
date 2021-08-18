@@ -9,7 +9,7 @@ _**NOTE:**_
 - [Docker Desktop](https://www.docker.com/products/docker-desktop) must be installed
 - Docker Desktop must be utilizing [Linux Containers](https://docs.docker.com/docker-for-windows/#switch-between-windows-and-linux-containers)
 
-1. Run in Powershell
+1. Run in Terminal
    ```
    docker-compose up
    ```
@@ -20,8 +20,8 @@ _**NOTE:**_
 
 ## Exiting Application
 
-1. Type `Ctrl-C` in Powershell Window running `docker-compose`
-2. In the same powershell window:
+1. Type `Ctrl-C` in Terminal Window running `docker-compose`
+2. In the same Terminal window:
    ```
    docker-compose down
    ```
